@@ -1,0 +1,180 @@
+/* style file for CTC 2013 site */
+
+body {
+  color: #333;
+  background: #FFFFFA;
+  line-height: 1.5;
+  font-family: Verdana, "Myriad Web", Syntax, sans-serif;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  margin-left: 50px;
+  margin-right: 8%;
+  padding: 0;
+  width: 850px;
+}
+
+
+/* header with menu at top right */
+
+header, footer, nav { 
+  display: block;
+}
+
+nav {
+  width:200px;
+  top: 0;
+  left: 650px;
+  background: #CCC;
+  position: absolute;
+}
+
+header {
+  position: relative;
+}
+
+div.text-short {
+  width:650px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 5px 0;
+}
+
+nav ul li {
+  margin-left: 15px;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+nav a { background: #CCC; }
+nav a:hover { background: #CAFFFF; }
+
+
+/* divs for body: organizing text and images */
+
+div.text-left {
+  width:500px;
+  float:left;
+}
+
+div.img-right {
+  width:300px;
+  float:right;
+}
+
+div.clear {
+  clear:both;
+}
+
+
+/* headers */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Tahoma, Verdana, "Myriad Web", Syntax, sans-serif;
+  font-style: normal;
+}
+
+h4 {
+ color: #23238e;
+}
+
+h1, h3, h5, dt {
+  font-weight: bold;
+}
+
+h2, h4, h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.33em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 1.33em;
+  margin-bottom: 0.5em;
+}
+
+h3, h4 {
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0.333em;
+}
+
+h5, h6 {
+  font-size: 1.33em;
+  margin-top: 0.75em;
+  margin-bottom: 0.25em;
+}
+
+h1, h2, h3, h5, h6, dt, th, hr {
+  color: #060;
+}
+
+/* looks like regular text with h6 header */
+h6 font.plike {
+    font-size: 0.75em;
+  margin-top: 0.75em;
+  margin-bottom: 0.25em;
+}
+
+
+/* indent paragraphs etc */
+
+.indent {
+  margin-left: 50px;
+}
+
+
+/* lists */
+
+ul {
+  margin-left: 0;
+  padding-left: 3em;
+}
+
+
+li {
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+
+/* links */
+
+a { text-decoration: none; color: #23238e; }
+a:hover { background: #B9EEEE; }
+
+:link img { border-color: #23238e; }
+:visited img { border-color: #23238e; }
+
+/* tables */
+
+td {
+  vertical-align: top;
+}
+
+tr.moreSpaceAbove > td
+{
+    padding-top: 30px;
+}
+
+tr.spaceAbove > td
+{
+    padding-top: 20px;
+}
+
+tr.lessSpaceAbove > td
+{
+    padding-top: 10px;
+}
+
+table {
+ border-collapse: collapse;
+}

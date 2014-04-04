@@ -1,0 +1,4 @@
+Package: qtlbook
+Version: 0.17-2
+Title: Datasets for the R/qtl book
+Depends: qtl

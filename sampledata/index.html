@@ -1,0 +1,171 @@
+<html> <head>
+<title>Sample data files for R/qtl</title>
+<link rel=stylesheet type="text/css" href="../kbroman.css">
+<link rel="SHORTCUT ICON" href="../r.ico">
+</head>
+
+<body>
+
+<h2 align="center">R/qtl sample data files</h2>
+
+<p align="center">[ <a href="http://www.rqtl.org">Home</a>
+| <a href="http://www.rqtl.org/download">Download</a> | <a 
+href="http://www.rqtl.org/faq">FAQ</a> | <a
+href="http://www.rqtl.org/STATUS.txt">Status</a> | <a
+href="http://www.rqtl.org/BUGS.txt">Bugs</a> | <a href="http://www.rqtl.org/graphs">Sample
+graphics</a> |
+<a href="http://www.rqtl.org/tutorials">Tutorials</a> | 
+<a href="http://www.rqtl.org/book">Book</a> |
+<a href="http://www.rqtl.org/manual/qtl-manual.pdf">Manual</a> | <a
+href="http://www.rqtl.org/citation.html">Citation</a> ] 
+<p class=noindent><hr>
+
+<p>These files contain sample QTL mapping data in several formats, so that the
+user may better understand how data may be formatted for import into R
+via the <code>read.cross</code> function.  These are the same as the
+<code>listeria</code> data set included with the R/qtl package, which
+may be accessed by typing <code>data(listeria)</code>.  (The data come
+from Boyartchuk et al., Nat Genet 27:259-260, 2001.)
+
+<p>Please read the help file for <code>read.cross</code>; it explains all of
+the details.
+
+<p><font color="red">Note</font>: The code provided should work if you
+place the files in your R working directory; otherwise, replace
+<code>"."</code> with the correct directory (being careful, in
+Windows, to use either forward slashes (<code>"/"</code>) or
+double-backslashes (<code>"\\"</code>), as a single backslash won't
+work).  Alternatively, you may read these files directly from the web
+by using <code>"http://www.rqtl.org/sampledata"</code> in place of <code>"."</code>.
+
+<p class=noindent><hr>
+<table cellpadding=2 cellspacing=2 noborder>
+
+<tr><td colspan=3><font size=4 color=#000066><pcode>"csv"</pcode> format</font> 
+
+<tr><td valign="top">Data file:<td width=5>&nbsp;
+    <td valign="top"><code><a href="listeria.csv">listeria.csv</a></code>
+
+<tr><td valign="top">R code:<td valign="top">
+     <td valign="top"><code>listeria.a <- read.cross("csv", ".", "listeria.csv")</code>
+
+
+<tr height=20><td valign="top">&nbsp;
+<tr><td colspan=3><font size=4 color=#000066><pcode>"csvr"</pcode> format
+  <font color=#777>(rotated <pcode>"csv"</pcode>)</font></font>
+
+
+<tr><td valign="top">Data file:<td width=15>
+    <td valign="top"><code><a href="listeria_rot.csv">listeria_rot.csv</a></code>
+
+<tr><td valign="top">R code:<td valign="top">
+     <td valign="top"><code>listeria.a2 <- read.cross("csvr", ".", "listeria_rot.csv")</code>
+
+
+<tr height=20><td valign="top">&nbsp;
+<tr><td colspan=3><font size=4 color=#000066><pcode>"csvs"</pcode> format
+  <font color=#777>(like <pcode>"csv"</pcode>, but with separate files for phenotype
+   and genotype data)</font></font>
+
+<tr><td valign="top">Genotypes:<td width=15>
+    <td valign="top"><code><a href="listeria_gen.csv">listeria_gen.csv</a></code>
+
+<tr><td valign="top">Phenotypes:<td width=15>
+    <td valign="top"><code><a href="listeria_phe.csv">listeria_phe.csv</a></code>
+
+<tr><td valign="top">R code:<td valign="top">
+     <td valign="top"><code>listeria.a3 <- read.cross("csvs", ".",
+                                  "listeria_gen.csv", "listeria_phe.csv")</code>
+	 
+<tr height=20><td valign="top">&nbsp;
+<tr><td colspan=3><font size=4 color=#000066><pcode>"csvsr"</pcode> format
+  <font color=#777>(like <pcode>"csvs"</pcode>, but with both files rotated)</font></font>
+
+<tr><td valign="top">Genotypes:<td width=15>
+    <td valign="top"><code><a href="listeria_gen_rot.csv">listeria_gen_rot.csv</a></code>
+
+<tr><td valign="top">Phenotypes:<td width=15>
+    <td valign="top"><code><a href="listeria_phe_rot.csv">listeria_phe_rot.csv</a></code>
+
+<tr><td valign="top">R code:<td valign="top">
+     <td valign="top"><code>listeria.a4 <- read.cross("csvsr", ".",
+                                  "listeria_gen_rot.csv", 
+                                  "listeria_phe_rot.csv")</code>
+	 
+<tr height=20><td valign="top">&nbsp;
+<tr><td colspan=3><font size=4 color=#000066><pcode>"mm"</pcode>
+  (MapMaker) format</font>
+
+<tr><td valign="top">Data file:<td width=15>
+    <td valign="top"><code><a href="listeria_raw.txt">listeria_raw.txt</a></code>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+	<font color=#777>(<pcode>"raw"</pcode> file containing both genotype and phenotype data)</font>
+
+<tr><td valign="top">Genetic map (ver 1):<td width=15>
+    <td valign="top"><code><a href="listeria_map.txt">listeria_map.txt</a></code> 
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
+	<font color=#777>(markers must be in order; map positions are
+	not required)</font>
+
+<tr><td valign="top">Genetic map (ver 2):<td width=15>
+    <td valign="top"><code><a href="listeria_maps.txt">listeria_maps.txt</a></code>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+	<font color=#777>(as produced by MapMaker/Exp)</font>
+
+<tr><td valign="top">R code:<td valign="top">
+     <td valign="top"><code>listeria.b <- read.cross("mm", ".",
+	 "listeria_raw.txt", , "listeria_map.txt")</code><br>
+	 <code>listeria.bb <- read.cross("mm", ".",
+                                 "listeria_raw.txt", , "listeria_maps.txt")</code>
+
+
+
+<tr height=20><td valign="top">&nbsp;
+<tr><td colspan=3><font size=4 color=#000066><pcode>"qtx"</pcode>
+  (Map Manager QTX) format</font>
+
+<tr><td valign="top">Data file:<td width=15>
+    <td valign="top"><code><a href="listeria.qtx">listeria.qtx</a></code>
+
+<tr><td valign="top">R code:<td valign="top">
+     <td valign="top"><code>listeria.c <- read.cross("qtx", ".", "listeria.qtx")</code>
+
+
+<tr height=20><td valign="top">&nbsp;
+<tr><td colspan=3><font size=4 color=#000066><pcode>"qtlcart"</pcode>
+  (QTL Cartographer) format</font>
+
+<tr><td valign="top">Data file:<td width=15>
+    <td valign="top"><code><a href="listeria_qc_cro.txt">listeria_qc_cro.txt</a></code>
+
+<tr><td valign="top">Genetic map:<td width=15>
+    <td valign="top"><code><a href="listeria_qc_map.txt">listeria_qc_map.txt</a></code>
+
+<tr><td valign="top">R code:<td valign="top">
+     <td valign="top"><code>listeria.d <- read.cross("qtlcart", ".", 
+                                 "listeria_qc_cro.txt", "listeria_qc_map.txt")</code>
+
+</table>
+
+
+<p class=noindent><hr>
+
+<p align="center">[ <a href="http://www.rqtl.org">Home</a>
+| <a href="http://www.rqtl.org/download">Download</a> | <a 
+href="http://www.rqtl.org/faq">FAQ</a> | <a
+href="http://www.rqtl.org/STATUS.txt">Status</a> | <a
+href="http://www.rqtl.org/BUGS.txt">Bugs</a> | <a href="http://www.rqtl.org/graphs">Sample
+graphics</a> |
+<a href="http://www.rqtl.org/tutorials">Tutorials</a> | 
+<a href="http://www.rqtl.org/book">Book</a> |
+<a href="http://www.rqtl.org/manual/qtl-manual.pdf">Manual</a> | <a
+href="http://www.rqtl.org/citation.html">Citation</a> ] 
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-609649-1";
+urchinTracker();
+</script> 
+</body></html>

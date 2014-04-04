@@ -1,0 +1,352 @@
+<html> <head>
+<title>A Guide to QTL Mapping with R/qtl: Complements</title>
+
+<meta name="description" content="Online complements for the book,
+A Guide to QTL Mapping with R/qtl">
+
+<meta name="keywords" content="book, software, statistics, bioinformatics,
+genetics, statistical genetics, QTL, quantitative trait loci, QTLs,
+complex traits, quantitative trait locus, genetic map, QTL mapping">
+
+<link rel=stylesheet type="text/css" href="../kbroman.css">
+<link rel="SHORTCUT ICON" href="/book_cover.ico">
+</head>
+
+<body>
+
+<h2>A Guide to QTL Mapping with R/qtl: Online complements</h2>
+
+This page contains online complements to 
+<i>A Guide to QTL Mapping with R/qtl</i>, by Karl W. Broman and
+&#346;aunak Sen.
+
+<p><hr>
+
+<p class=indent>
+<table cellspacing=1 cellpadding=1>
+<tr><td width=300><a href="#buy">Buy the book</a><br>
+<td><a href="#errata">Errata</a><br>
+
+<tr><td><a href="#description">Description</a><br>
+<td><a href="#software">Software</a><br>
+
+<tr><td><a href="#reviews">Reviews</a><br>
+<td><a href="#datafiles">Sample data files</a><br>
+
+<tr><td><a href="#contents">Contents</a><br>
+<td><a href="#contact">Contact the authors</a>
+
+<tr><td><a href="rqtlbook_ch04.pdf">Sample chapter (pdf)</a><br>
+</table>
+
+<p><hr>
+
+<h3><a name="buy"></a>Buy the book</h3>
+
+<table cellspacing=0 cellpadding=0>
+<tr>
+ <td width=40>&nbsp;
+ <td align="left" valign="top"><a
+href="http://www.springer.com/978-0-387-92124-2"><img
+  src="book_cover.jpg" alt="Image of book cover"></a>
+<td width=80>&nbsp;
+<td align="left" valign="center">
+Buy a copy (ISBN: 978-0-387-92124-2):
+<p class=indent>Directly from the publisher, <a
+href="http://www.springer.com/978-0-387-92124-2">Springer</a>.
+
+<p class=indent>At <a
+href="http://www.amazon.com/exec/obidos/ASIN/0387921249/7210-20">Amazon</a>; 
+<a 
+href="http://search.barnesandnoble.com/Karl-W-Broman/e/9780387921242">Barnes
+& Noble</a>
+</table>
+<p><hr>
+
+<h3><a name="description"></a>Description</h3>
+
+<p class=indent>Our aim in this book is to give an overview of the
+practical aspects of the analysis of QTL mapping experiments based on
+inbred line crosses, with explicit instructions on the use of the <a
+href="http://www.rqtl.org">R/qtl software</a>
+(an add-on package for <a href="http://www.r-project.org">R</a>).  We
+give some of the details of the statistical methods, but 
+mostly focus on how to get and make sense of results.  Real data
+examples are included throughout.  
+
+<p class=indent>The intended audience includes scientists who are
+performing QTL mapping experiments and want to participate directly in
+the analysis.  Some readers will be statisticians analyzing data from
+QTL experiments with a basic understanding of genetics.
+
+
+<p class=indent>All of the R code used in the book, including the
+detailed code used to create the figures, is available in files below,
+under <a href="#software">Software</a>.  In addition, we have created
+an R package, R/qtlbook, that contains all of our example data sets
+(except those already included in R/qtl); it is also available under
+<a href="#software">Software</a>, below.
+
+<p><hr>
+
+<h3><a name="reviews"></a>Reviews</h3>
+
+<p class=indent>Q Zhou (2010) <a href="http://www.jstatsoft.org">Journal of
+Statistical Software</a> Vol. 32, Book Review 5 [<a
+href="http://www.jstatsoft.org/v32/b05/paper">pdf (133k)</a>]<br>
+
+<p class=indent><blockquote class=indent>
+"In sum, this is a well-written book with carefully chosen and nicely
+organized topics.  It can serve as a good introduction to QTL mapping
+methodology and a useful practical guide to the R package."
+</blockquote>
+
+<p class=indent>RW Doerge (2010) <a href="http://www3.interscience.wiley.com/journal/118538342/home">Biometrics</a>
+66(2):658-659 [<a
+href="http://www3.interscience.wiley.com/cgi-bin/fulltext/123489385/HTMLSTART">html</a>
+| <a
+href="http://www3.interscience.wiley.com/cgi-bin/fulltext/123489385/PDFSTART">pdf
+(152k)</a>]<br>
+
+
+<p class=indent><blockquote class=indent>
+"The authors should be commended on presenting a well-written
+book that is understandable, and in-depth enough, to
+be considered a responsible treatment of QTL mapping for
+anyone who is interested."
+</blockquote>
+
+<div>
+<p class=indent><a href="JinxRqtl.jpg">Jinx</a> (<a href="http://www.gstp.wisc.edu/people/LeslieTurner.htm">Leslie Turner</a>, personal communication) [<a href="JinxRqtl.jpg">jpeg</a>]
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+<p class=indent><blockquote class=indent>
+"Meow." 
+
+</blockquote>
+
+<h3><hr>
+
+<h3><a name="contents"></a>Contents</h3>
+
+<p class=indent>Detailed contents as PDF: <a href="contents.pdf">contents.pdf</a>
+
+<p class=indent>
+<table cellspacing=2 cellpadding=2 noborder>
+<tr><td align="right">  1 <td width=10>&nbsp;<td> Introduction
+<tr><td align="right">  2 <td width=10>&nbsp;<td> Importing and simulating data
+<tr><td align="right">  3 <td width=10>&nbsp;<td> Data checking 
+<tr><td align="right">  4 <td width=10>&nbsp;<td> Single-QTL analysis [<a
+    href="rqtlbook_ch04.pdf">Sample chapter (pdf)</a>]
+<tr><td align="right">  5 <td width=10>&nbsp;<td> Non-normal phenotypes
+<tr><td align="right">  6 <td width=10>&nbsp;<td> Experimental design and power
+<tr><td align="right">  7 <td width=10>&nbsp;<td> Working with covariates
+<tr><td align="right">  8 <td width=10>&nbsp;<td> Two-dimensional, two-QTL scans
+<tr><td align="right">  9 <td width=10>&nbsp;<td> Fit and exploration of multiple-QTL models
+<tr><td align="right">  10<td width=10>&nbsp;<td>  Case study I
+<tr><td align="right">  11<td width=10>&nbsp;<td>  Case study II      
+<tr><td align="right">   A<td width=10>&nbsp;<td>  Installing R and R/qtl
+<tr><td align="right">   B<td width=10>&nbsp;<td>  List of functions in R/qtl [<a href="rqtlbook_appB.pdf">pdf</a>]
+<tr><td align="right">   C<td width=10>&nbsp;<td>  QTL mapping data sets
+<tr><td align="right">   D<td width=10>&nbsp;<td>  Hidden Markov models for QTL mapping
+</table>
+
+
+
+
+<p><hr>
+
+<h3><a name="errata"></a>Errata</h3>
+
+<h4>Major errata:</h4>
+<ol>
+<li>Chapter 3, page 53, second paragraph: the sentence
+
+  <blockquote>Individuals 5 and 138 have identical genotypes at all 86
+  markers at which they were both typed; individuals 12 and 55 have
+  the same genotype at 75/76 markers.</blockquote>
+
+  <p> should be replaced with
+
+  <blockquote>Individuals 12 and 55 have identical genotypes at all 86
+  markers at which they were both typed; individuals 5 and 138 have
+  the same genotype at 75/76 markers.</blockquote>
+
+  <p>That is, we had the two pairs reversed.
+
+<li>Chapter 8, page 234, Table 8.2 has a couple of errors.
+
+  <p class=indent>The number of degrees of freedom for LOD<sub>a</sub>
+  for A:X should be 8 &ndash; 3 = 5 (not 8).
+
+  <p class=indent>The number of degrees of freedom for LOD<sub>fv1</sub>
+  for X:X should be 12 &ndash; 6 = 6 (not 3).
+
+  <p>The table should appear as follows.
+
+    <p class=indent><a href="Figs/table_8.2_revised.png"><img src="Figs/table_8.2_revised_thumb.png"></a>
+
+<li>Chapter 11, page 349, Fig. 11.14 is seriously messed up.
+
+    <p>The figure should appear as follows. (Click the image to see a
+    larger version.)
+
+    <p class=indent><a href="Figs/fig_11.14_revised.jpg"><img src="Figs/fig_11.14_revised_thumb.jpg"></a>
+
+<li>Appendix D, page 381, Table D.2 has a couple of errors.
+
+  <p class=indent>Pr(O=C | G=AA) = &epsilon; (not &epsilon;/2)
+  <p class=indent>Pr(O=D | G=BB) = &epsilon; (not &epsilon;/2)
+
+   <p>The table should appear as follows.  
+
+    <p class=indent><a href="Figs/table_D.2_revised.jpg"><img src="Figs/table_D.2_revised_thumb.jpg"></a>
+
+
+</ol>
+
+<h4>Minor errata:</h4>
+<ol start=5>
+<li>Chapter 1, pages 4 and 5, legends to Fig. 1.1 and 1.2:
+     Where we say "blue and pink", we should have said "blue and
+      red".
+</li><p>
+
+<li>Chapter 1, page  8, lines 3-4 of first paragraph: Change "if there
+     is there is an average..." to "if there is an average...".
+</li><p>
+
+<li>Chapter 7, page 186, line 5 of the first paragraph: Change "let us
+    us separate the..." to "let us separate the...".
+</li><p>
+
+<li>Appendix D, page 381, line 4: Change "possibly genotyping errors"
+to "possible genotyping errors".
+
+</ol>
+
+
+
+
+<p><hr>
+
+<h3><a name="software"></a>Software</h3>
+
+<p class=indent><a href="http://www.r-project.org">R web page</a>
+
+<p class=indent><a
+href="http://www.rqtl.org">R/qtl web page</a>
+[<a href="http://www.rqtl.org/download">Download page</a>]
+
+<p class=indent>R/qtlbook package (with the example data used in the
+book): 
+<table cellpadding=3, cellspacing=3, noborder>
+  <tr><td width=50>&nbsp;<td>Unix source:<td width=10>&nbsp;<td><a
+      href="qtlbook_0.18-1.tar.gz">qtlbook_0.18-1.tar.gz</a><td width=10>&nbsp;<td valign="top">(2 Nov 2011)
+<tr><td><td>Mac OS X binary:<td><td><a href="qtlbook_0.18-1.tgz">qtlbook_0.18-1.tgz</a>
+<tr><td><td>Windows binary:<td><td><a href="qtlbook_0.18-1.zip">qtlbook_0.18-1.zip</a>
+</table>
+
+<p class=indent><a
+href="http://www.epibiostat.ucsf.edu/biostat/sen/qtldesign-software/">R/qtlDesign
+web page</a> [<a
+href="qtlDesign_0.941.tar.gz">Unix source (ver 0.941, 8 Sep 2010)</a>]
+
+<p class=indent>R code from the book:
+
+<table cellpadding=1 cellspacing=1 noborder>
+<tr><td><td colspan=5><hr>
+<tr><td>               <td colspan=3>Chapter            <td width=15><td>File(s)
+<tr><td><td colspan=5><hr>
+<tr><td width=50>&nbsp;<td>2<td> <td>Importing and simulating data
+                       <td><td><code><a href="RqtlBook_Code/chap02.R">chap02.R</a></code>
+<tr><td>               <td>3<td> <td>Data checking
+                       <td><td><code><a href="RqtlBook_Code/chap03.R">chap03.R</a></code>
+<tr><td>               <td>4<td width=5> <td>Single-QTL analysis
+                       <td><td><code><a href="RqtlBook_Code/chap04.R">chap04.R</a></code>
+<tr><td>               <td>5<td width=5> <td>Non-normal phenotypes
+                       <td><td><code><a href="RqtlBook_Code/chap05.R">chap05.R</a></code>,
+                         <code><a href="RqtlBook_Code/scanone_cph.R">scanone_cph.R</a></code>
+<tr><td>               <td>6<td width=5> <td>Experimental design and power
+                       <td><td><code><a href="RqtlBook_Code/chap06.R">chap06.R</a></code>
+<tr><td>               <td>7<td width=5> <td>Working with covariates
+                       <td><td><code><a href="RqtlBook_Code/chap07.R">chap07.R</a></code>
+<tr><td>               <td>8<td width=5> <td>Two-dimensional, two-QTL scans
+                       <td><td><code><a href="RqtlBook_Code/chap08.R">chap08.R</a></code>
+<tr><td>               <td>9<td width=5> <td>Fit and exploration of multiple-QTL models
+                       <td><td><code><a href="RqtlBook_Code/chap09.R">chap09.R</a></code>
+<tr><td>               <td>10<td width=5> <td>Case study I
+                       <td><td><code><a href="RqtlBook_Code/chap10.R">chap10.R</a></code>
+<tr><td>               <td>11<td width=5> <td>Case study II
+                       <td><td><code><a href="RqtlBook_Code/chap11.R">chap11.R</a></code>
+<tr><td><td colspan=5><hr>
+</table>
+
+
+<p class=indent>Detailed R code for all figures in the book:
+
+<table cellpadding=1 cellspacing=1 noborder>
+<tr><td><td colspan=5><hr>
+<tr><td>               <td colspan=3>Chapter            <td width=15><td>File(s)
+<tr><td><td colspan=5><hr>
+<tr><td width=50>&nbsp;<td>1<td> <td>Introduction
+                       <td><td><code><a href="RqtlBook_Code/fig01.R">fig01.R</a></code>, 
+                       <code><a href="RqtlBook_Code/meiosis_func.R">meiosis_func.R</a></code>
+<tr><td width=50>&nbsp;<td>2<td> <td>Importing and simulating data
+                       <td><td><code><a href="RqtlBook_Code/fig02.R">fig02.R</a></code>
+<tr><td>               <td>3<td> <td>Data checking
+                       <td><td><code><a href="RqtlBook_Code/fig03.R">fig03.R</a></code>
+<tr><td>               <td>4<td width=5> <td>Single-QTL analysis
+                       <td><td><code><a href="RqtlBook_Code/fig04.R">fig04.R</a></code>
+<tr><td>               <td>5<td width=5> <td>Non-normal phenotypes
+                       <td><td><code><a href="RqtlBook_Code/fig05.R">fig05.R</a></code>
+<tr><td>               <td>6<td width=5> <td>Experimental design and power
+                       <td><td><code><a href="RqtlBook_Code/fig06.R">fig06.R</a></code>
+<tr><td>               <td>7<td width=5> <td>Working with covariates
+                       <td><td><code><a href="RqtlBook_Code/fig07.R">fig07.R</a></code>
+<tr><td>               <td>8<td width=5> <td>Two-dimensional, two-QTL scans
+                       <td><td><code><a href="RqtlBook_Code/fig08.R">fig08.R</a></code>
+<tr><td>               <td>9<td width=5> <td>Fit and exploration of multiple-QTL models
+                       <td><td><code><a href="RqtlBook_Code/fig09.R">fig09.R</a></code>
+<tr><td>               <td>10<td width=5> <td>Case study I
+                       <td><td><code><a href="RqtlBook_Code/fig10.R">fig10.R</a></code>
+<tr><td>               <td>11<td width=5> <td>Case study II
+                       <td><td><code><a href="RqtlBook_Code/fig11.R">fig11.R</a></code>
+<tr><td><td colspan=5><hr>
+</table>
+
+<p class=indent>All of the code from the book compressed into one file: <code><a href="RqtlBook_Code/RqtlBook_Code.tgz">RqtlBook_Code.tgz</a></code>
+
+<p><hr>
+
+<h3><a name="datafiles"></a>Sample data files</h3>
+
+<p class=indent>Samples of data files for import into R/qtl, in a variety of
+formats and with the necessary R code, are <a
+href="http://www.rqtl.org/sampledata">available
+here</a>.
+
+
+<p><hr>
+
+<h3><a name="contact"></a>Contact the authors</h3>
+
+<p class=indent>
+<table cellpadding=1 cellspacing=1 noborder>
+  <tr><td><a href="http://www.biostat.wisc.edu/~kbroman">Karl
+      W. Broman</a> <td width=60>&nbsp;
+  <td><a href="http://www.biostat.ucsf.edu/sen">&#346;aunak Sen</a>
+  <tr><td>Department of Biostatistics and Medical Informatics<td>    <td>Department of Epidemiology and Biostatistics
+  <tr><td>University of Wisconsin-Madison    <td>    <td>University of California, San Francisco
+<!--  <tr><td>&nbsp;-->
+  <tr><td>kbroman at biostat.wisc.edu
+      <td><td>sen at biostat.ucsf.edu
+
+</table>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-609649-1";
+urchinTracker();
+</script></body></html>

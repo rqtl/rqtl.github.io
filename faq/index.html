@@ -1,0 +1,565 @@
+<html> <head>
+<title>R/qtl FAQ</title>
+<link rel=stylesheet type="text/css" href="../kbroman.css">
+<link rel="SHORTCUT ICON" href="../r.ico">
+</head>
+
+<body>
+
+<h2 align="center">R/qtl Frequently Asked Questions</h2>
+
+<p align="center">[ <a href="http://www.rqtl.org">Home</a>
+| <a href="http://www.rqtl.org/download">Download</a> | <a 
+href="http://www.rqtl.org/STATUS.txt">Status</a> | <a
+href="http://www.rqtl.org/BUGS.txt">Bugs</a> | <a href="http://www.rqtl.org/graphs">Sample
+graphics</a> |
+<a href="http://www.rqtl.org/sampledata">Sample data</a> |
+<a href="http://www.rqtl.org/tutorials">Tutorial</a> | 
+<a href="http://www.rqtl.org/book">Book</a> |
+<a href="http://www.rqtl.org/manual/qtl-manual.pdf">Manual</a> | <a
+href="http://www.rqtl.org/citation.html">Citation</a> ] 
+<p class=noindent><hr>
+
+<p class=noindent>If you have questions, suggestions, corrections,
+etc., please email Karl Broman (kbroman at biostat.wisc.edu).
+
+<hr>
+
+<ol class="gap">
+  <li><font color=#008><i>I'm having trouble reading my data into
+      R.</i></font>
+
+      <p>First, take a look at the help file for the
+      <code>read.cross</code> function.  Next, look at some of the <a
+      href="http://www.rqtl.org/sampledata">sample data files</a>.
+
+      <p>If you are still having trouble, send an email to Karl Broman
+      (kbroman at biostat.wisc.edu), attaching a
+      copy of your data.  He's had little trouble, up to now,
+      providing assistance with such problems, and will keep your data
+      confidential.  
+  </li>
+
+
+  <li><font color=#008><i>It's still not clear to me how X chromosome
+      genotypes should be coded.</i></font>
+
+      <p>Code hemizygous male genotypes as if they were homozygous.
+      For example, for a backcross, you could code females as A and H and males as
+      A and B.  Or, you could code females as AA and AB and males as
+      AA and BB, in which case this needs to be indicated through the
+      <code>genotypes</code> argument in <code>read.cross</code>.
+
+      <p>Be sure to include a "phenotype" column indicating the sex of
+      the individuals.  Also, in an intercross, include another
+      "phenotype" column that indicates the cross direction; this
+      should be named "pgm" (for "paternal grandmother").
+
+  <li><font color=#008><i>Are you planning to implement
+      <pcode><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></pcode>?</i></font>
+
+      <p>The list of things we hope to implement in R/qtl <a
+      href="http://www.rqtl.org/TODO.txt">is available
+      here</a>.  Many items on the list will not be tackled for quite some
+      time.
+
+      <p>If you have extensions to R/qtl that may be of general use, send
+      an email to Karl Broman (kbroman at biostat.wisc.edu); he will be happy
+      to discuss incorporating your code into the package.
+
+
+  <li><font color=#008><i>I'm getting the following error/warning; what does it
+  mean?</i></font>
+
+      <p>We apologize that some warnings and error messages are not
+      very easy to understand.  For the same reason, they are seldom
+      simple to diagnose without more information.
+
+      <p>Send an email to Karl
+      Broman (kbroman at biostat.wisc.edu), including the code that led to the problem, and
+      ideally also the primary data.  It will also be useful to
+      include information on your operating system and the versions of
+      R and R/qtl that you are using.  Your versions of R and R/qtl
+      may be determined by typing the following.
+
+      <p><pcode>> </pcode><code>version</code><br>
+      <pcode>> </pcode><code>qtlversion()</code>
+  
+
+
+
+  <li><font color=#008><i>I'm running out of memory; what should I
+  do?</i></font> 
+
+      <p>In Windows, by default you get 1 Gb memory (or the amount of
+      RAM you have on your computer, if that is less that 1 Gb).  If
+      you have 2 Gb RAM, you need to use the command-line flag
+      <code>--max-mem-size</code> to have access to the additional
+      memory.
+
+      <p>Right-click on the R icon that you use to start R and select
+      "Properties".  Then select the tab "Shortcut" and modify the "Target"
+      to include something like <code>--max-mem-size=2G</code>.
+
+      <p>Alternatively, you can change the memory limit within R using the
+      <code>memory.limit</code> function, giving a new limit in Mb.  (For
+      example, type <code>memory.limit(2048)</code> to change the memory
+      limit to 2 Gb.)
+
+      <p>See also the <a
+      href="http://cran.r-project.org/bin/windows/rw-FAQ.html">R for Windows
+      FAQ</a> and, within R, type <code>?Memory</code> and
+      <code>?memory.size</code>.
+  
+
+
+  <li><font color=#008><i>I'm still running out of memory; what should
+      I do?</i></font>
+
+      <p>Of course, one is limited by the memory available on one's
+      computer, and so there are not many options.
+
+      <p>First, clean up your workspace, removing objects that aren't
+      important to you.  You can save objects to disk with the
+      <code>save</code> command.  
+
+      <p>The multiple imputation method, as implemented, uses a
+      particularly large amount of memory.  Consider using a small number
+      of imputations (<code>n.draws</code>) or a coarser grid
+      (<code>step</code>) in <code>sim.geno</code>,
+      or focusing on a subset of the chromosomes.
+
+
+
+  <li><font color=#008><i>I'm considering buying a computer for QTL
+      analyses; do you have any suggestions?</i></font>
+
+      <p>We recommend purchasing a computer with as much memory (RAM) as
+      possible: preferably at least 2 Gb.  And of course, the faster the
+      processor, the better.
+
+
+
+  <li><font color=#008><i>Does R/qtl support multiple computer
+      processors?</i></font> 
+
+      <p>R currently can deal with just one processor at a time.  However, if
+      you have a computer with multiple processors, you can speed up
+      permutation tests and simulations by spawning multiple instances of R
+      at once.  We routinely make use of the multiple processors on a linux
+      cluster for more rapid permutation tests.
+
+      <p>If a permutation test is to be split across multiple processors, 
+      it is important to ensure that the random number seeds are set to be
+      different for the different jobs, using the function
+      <code>set.seed</code>.  Otherwise, the multiple jobs may give
+      precisely the same results.
+
+      <p>In version 1.12, we added the ability to have scanone and
+      scantwo permutations run in parallel, if the <a
+      href="http://www.stat.uiowa.edu/%7Eluke/R/cluster/cluster.html">snow</a>
+      package is installed.  The argument <code>n.cluster</code>
+      indicates the number of parallel nodes to use.
+
+  <li><font color="#008"><i>How do I change R's working
+      directory?</i></font>
+
+      <p>Within R, use the functions <code>getwd</code> to determine
+      the current working directory,  <code>setwd</code> to change the
+      current working directory, and <code>dir</code> to list the
+      files in the current working directory.
+
+      <p>To change R's default working directory in Windows, create a
+      shortcut to the R GUI (there may already be one on your
+      desktop) and then do the following:
+      <ol class=nogap><li>Right-click on the shortcut.
+	  <li>Select the tab "Shortcut".
+	  <li>Change "Start in" to the desired working directory.</ol>
+
+      <p>To change R's default working directory on a Mac, start R and
+	  then select (on the menu bar) R -> Preferences -> Startup,
+	  and then change the "Initial working directory".
+
+  <li><font color=#008><i>Can one analyze recombinant inbred line
+      (RIL) data?</i></font>
+
+      <p>It is possible, but it is not yet documented.  And we can't
+      handle heterozygote genotypes, so those must be treated as missing.
+
+      <p>Read in your data as if it were a backcross, and then type
+      one of the following, according to whether your RIL were
+      generated by selfing or sibling mating (I assume that your data
+      is in the object <code>myx</code>.)
+
+      <p><pcode>> </pcode><code>myx <- convert2riself(myx)</code><br>
+      <pcode>> </pcode><code>myx <- convert2risib(myx)</code>
+
+      <p>The data are treated essentially like a backcross, but the
+      map is expanded before calculating QTL genotype probabilities
+      and so forth.  Note that we currently can deal only with strain
+      averages as phenotypes.  
+  
+
+  <li><font color=#008><i>Can one analyze outcross data?</i></font>
+
+      <p>Generally, no.  R/qtl does include facilities for analysis of a
+      phase-known four-way cross, generally derived from a cross between
+      four inbred strains, with all progeny from a cross of the form (A
+      &times; B) &times; (C &times; D), with females listed first.  See
+      the help
+      file for the <code>read.cross</code> function for details
+      about the coding of the genotype data.
+
+
+  <li><font color=#008><i>Can one analyze data on half-sib families?</i></font>
+
+      <p>No.
+
+
+  <li><font color=#008><i>Can one analyze advanced intercross lines (AIL)?</i></font>
+
+      <p>R/qtl has no special facilities for dealing with advanced intercross
+      lines.  One might analyze such data as if they were from an intercross,
+      though with an expanded genetic map, but it is important to take
+      account of the relationships among individuals (for example, the
+      sibships in the final generation), and R/qtl is not 
+      currently able to do that.
+
+
+
+
+  <li><font color=#008><i>Can one do a genome scan with a dominant,
+      recessive, or additive allele model?</i></font>
+
+      <p>No.  In the analysis of intercross data, we always consider the full model
+      (allowing the three genotypes to have different phenotype averages).
+      One may inspect the results of <code>effectplot</code>
+      to assess whether a locus appears to be dominant or additive.
+
+
+
+  <li><font color=#008><i>Can one test if an allele is associated with an increase
+      in phenotype?</i></font>
+
+      <p>No, though one may inspect the results of <code>effectplot</code>
+      which may suggest such an effect.  We see little value in a formal
+      significance test.
+
+
+
+  <li><font color=#008><i>How can I estimate the heritability due to a QTL?</i></font>
+
+      <p>One may use <code>fitqtl</code> to fit a
+      multiple-QTL model and estimate the percent phenotypic variance
+      explained by each QTL.
+
+      <p>In the context of a single-QTL model, the heritability due to a QTL
+      may be estimated by 1 &#150; 10<sup>-2 LOD / <i>n</i></sup>, where <i>n</i> is the
+      sample size and LOD is the LOD score (from <code>scanone</code>).
+
+
+
+
+
+  <li><font color=#008><i>How many permutations should I run?</i></font>
+
+      <p>We generally use 1000 permutation replicates, though we may use 10,000
+      or 100,000, if we want more precise results.
+
+      <p>In general, we view the permutation test as a method for estimating a
+      p-value.  Suppose that the true p-value (if one performed all possible
+      permutations) is <i>p</i>, we use <i>n</i> permutation
+      replicates, and <i>x</i> is the number of replicates giving a LOD
+      score greater or equal to that observed.  Then <i>x</i> follows a
+      binomial(<i>n</i>, <i>p</i>) distribution.  Our estimate of the p-value is
+      <i>x</i>/<i>n</i>, and this has standard error (SE) =
+      &radic;[<i>p</i>(1&#150;<i>p</i>)/<i>n</i>]. 
+
+      <p>If one wishes the SE of the estimated p-value to be &sim;0.001 in
+      the case that <i>p</i> &asymp; 0.05, one would need 0.05 &times; 0.95 /
+      0.001<sup>2</sup> = 47,500 permutation replicates.
+
+
+
+  <li><font color=#008><i>Can one calculate the individual contributions to the LOD
+      score?</i></font>
+
+      <p>No.
+
+
+  <li><font color=#008><i>Can I analyze a monogenic (Mendelian) trait?</i></font>
+
+      <p>Yes.  Use <code>model="binary"</code> in <code>scanone</code> or 
+      <code>scantwo</code>.
+      Alternatively, created a dummy marker with the genotypes encoding the
+      phenotypes, and use <code>est.rf</code>
+      to calculate LOD scores for linkage between each typed marker
+      and the phenotype.
+
+
+
+  <li><font color=#008><i>I have genotype data only on affected individuals. Can
+      these data be analyzed with R/qtl?</i></font>
+
+      <p>Currently, the analysis of a binary phenotype in R/qtl requires
+      genotype data on both affected and unaffected individuals.  In the
+      case that genotype data are available only on affected individuals,
+      one may use <code>geno.table</code>
+      to identify loci that exhibit segregation distortion and so are
+      indicated to be potentially linked to a disease susceptibility locus.
+      Such evidence should be confirmed by further genotyping unaffected
+      individuals.
+
+
+
+  <li><font color=#008><i>How can I pick out multiple peaks on a chromosome from the
+      output of <code>scanone</code>?</i></font>
+
+      <p>It is best not to rely on the results of <code>scanone</code>
+      to infer the presence of multiple linked QTL.  Instead, one
+      should consider the results of a two-dimensional, two-QTL scan (with <code>scantwo</code>) or
+      multiple QTL analysis (with <code>fitqtl</code> and/or <code>scanqtl</code>).
+
+      <p>Nevertheless, if there are a couple of peaks on a chromosome, and one
+      wishes to identify the location of the second peak, one can subset the
+      results from <code>scanone</code>
+      to find the location of the second peak.  For example, if <code>out</code>
+      contains the output from <code>scanone</code>,
+      and one wishes to find the location for the peak on chromosome 1 that
+      is distal to 50 cM on the genetic map, one may use code like the
+      following.
+
+
+      <p><pcode>> </pcode><code>max(out[out$chr==1 & out$pos > 50,])</code>
+
+
+
+  <li><font color=#008><i>How can one remove partially informative genotypes (C or
+      D) from a data set?</i></font>
+
+      <p>Use the function <code>strip.partials</code>.
+
+
+  <li><font color=#008><i>How can one investigate possible interactions between a
+      specific locus and the rest of the genome?</i></font>
+
+      <p>The simplest approach is to consider a marker (preferably one with
+      complete genotype data) near the position of interest, and perform a
+      genome scan with that marker as first an additive and then an
+      interactive covariate.  The difference between the two sets of LOD
+      scores concern evidence for interaction with the marker position.  
+
+
+      <p>Alternatively, one can use <code>makeqtl</code> and then
+      <code>addqtl</code>, using either Haley-Knott regression or
+      multiple imputaton.  See the following code, for interactions
+      with the locus at 18 cM on chromosome 15 in the
+      <code>hyper</code> data.  
+
+<p>
+<pcode>> </pcode><code>data(hyper)</code><br>
+<pcode>> </pcode><code>hyper <- calc.genoprob(hyper, step=2.5, err=0.001)</code><br>
+<br>
+<pcode>> </pcode><code>qtl <- makeqtl(hyper, chr=15, pos=18, what="prob")</code><br>
+<br>
+<pcode>> </pcode><code>out.i <- addqtl(hyper, qtl=qtl, formula=y~Q1*Q2, method="hk")</code><br>
+<pcode>> </pcode><code>out.a <- addqtl(hyper, qtl=qtl, formula=y~Q1+Q2, method="hk")</code><br>
+<br>
+<pcode>> </pcode><code>plot(out.i - out.a)</code>
+
+      <p>The code above uses Haley-Knott regression; to use multiple
+      imputation, do the following.
+
+<p>
+<pcode>> </pcode><code>data(hyper)</code><br>
+<pcode>> </pcode><code>hyper <- sim.geno(hyper, step=2.5, n.draws=256, err=0.001)</code><br>
+<br>
+<pcode>> </pcode><code>qtl <- makeqtl(hyper, chr=15, pos=18, what="draws")</code><br>
+<br>
+<pcode>> </pcode><code>out.i <- addqtl(hyper, qtl=qtl, formula=y~Q1*Q2, method="imp")</code><br>
+<pcode>> </pcode><code>out.a <- addqtl(hyper, qtl=qtl, formula=y~Q1+Q2, method="imp")</code><br>
+<br>
+<pcode>> </pcode><code>plot(out.i - out.a)</code>
+
+
+  <li><font color=#008><i>Can one apply <code>scantwo</code>
+      restricted to an interval?</i></font>
+
+      <p>No, but one may use <code>scanqtl</code>
+      to perform a two-dimensional, two-QTL scan in a given interval.
+
+
+  <li><font color=#008><i>How can multiple crosses be combined?</i></font>
+
+      <p>One may use the function <code>c.cross</code> to combine multiple
+      backcrosses and/or intercrosses, provided that they have the same
+      genetic maps.  This should be done after running <code>calc.genoprob</code>
+      or <code>sim.geno</code>
+      The combined analysis of multiple crosses requires care and is beyond
+      the scope of this book.
+
+
+  <li><font color=#008><i>Can one apply the "False discovery rate" (FDR) idea to QTL
+      mapping with R/qtl?</i></font>
+
+      <p>In the context of a single phenotype, one cannot fruitfully apply the
+      false discovery rate idea to QTL mapping. If one views as the set of
+      null hypotheses that individual loci are not linked to any QTL, one
+      really has just one null hypothesis per chromosome, and so a total of
+      20 null hypotheses for the mouse genome.
+
+
+
+      
+  <li><font color=#008><i>Can R/qtl be used to perform association mapping (aka
+  </i>in silico<i> mapping)?</i></font>
+
+      <p>No.
+
+
+      
+  <li><font color=#008><i>Can one use physical locations of markers in place of a
+      genetic map?</i></font>
+
+      <p>The results of QTL analysis depend critically on the order of the
+      genetic markers, and so knowledge of the physical locations of markers
+      will be useful.  However, calculations of conditional QTL genotype
+      probabilities, given the available marker data, must rely on estimates
+      of the recombination fractions between markers, which may only be
+      obtained from a genetic map.  Physical distances between markers are
+      not a good substitute for genetic distances.
+
+
+
+      
+  <li><font color=#008><i>What map function should I use?</i></font>
+
+      <p>In general, one should use a map function that best reflects the level
+      of crossover interference.  However, QTL mapping calculations still
+      generally rely on an assumption of no crossover interference; a map
+      function is used only to convert genetic distances into recombination
+      fractions.
+
+      <p>The choice of map function seldom has much effect on the QTL mapping
+      results, particularly in the case that the genetic markers are
+      relatively dense and the genotype data are relatively complete.  If
+      one uses, for the analysis, a genetic map that was estimated from the
+      same data, we recommend use of the same map function for both the
+      estimation of the genetic map and the QTL mapping analysis; the choice
+      of map function will have little impact on the results.
+
+
+
+      
+  <li><font color=#008><i>Are QTL mapping results much affected by segregation
+      distortion?</i></font>
+
+      <p>QTL analyses are generally conditional on the observed marker genotype
+      data, and so results are little affected by the presence of
+      segregation distoortion.  The reconstruction of genotypes at putative
+      QTL relies on an assumption of no segregation distortion, but with
+      reasonably dense markers and reasonably complete genotype data, this
+      will not be a concern.  Segregation distortion may result in reduced
+      power to identify QTL, but it should not lead to spurious evidence for
+      QTL.  And so, while one should investigate the possibility of
+      segregation distortion (for example, with <code>geno.table</code>),
+      as it may indicate genotyping problems, one need not be
+      concerned about the influence of true segregation distortion on
+      the QTL mapping results.
+
+
+
+      
+  <li><font color=#008><i>The organism I'm studying doesn't have a linkage map.  Can
+      I construct one from scratch with R/qtl?</i></font>
+
+      <p>There are several facilities for constructing genetic maps
+      <i>de novo</i> in R/qtl.  
+
+      <p>First, import the data as if all markers are on one
+      chromosome.
+
+      <p>Use <code>est.rf</code>
+      to estimate the pairwise marker recombination fractions and then 
+      <code>formLinkageGroups</code>
+      to partition the markers into linkage groups.
+
+      <p>Use <code>orderMarkers</code>
+      to get initial marker orders for each linkage group, and then <code>ripple</code>
+      to establish study alternate orders of markers within each
+      linkage group.
+
+      <p>The other tools you'll be wanting are:
+      <ul>
+	<li><code>est.map</code>
+	<li><code>replace.map</code>
+	<li><code>switch.order</code>
+	<li><code>movemarker</code>
+      </ul><p>
+
+  <li><font color="#008"><i>When I run <code>scanone</code> (or <code>scantwo</code>),
+  sometimes I get the warning message:
+
+<blockquote><code>X'X matrix is singular</code></blockquote>
+
+Should I worry about this?</i></font>
+
+<p>That warning message is saying that one of the many linear
+regression fits was over-specified. That may happen if one of the
+possible genotypes is missing, particularly in the iterative methods
+(such as <code>method="em"</code> and <code>method="ehk"</code>). 
+
+<p>You can generally ignore this. It usually happens in regions with
+little evidence for a QTL. Sometimes you'll get spuriously large LOD
+scores (> 100) in these situations, in which case the warning may help
+to explain such artifacts.</li><p>
+
+
+  <li><font color=#008><i>Are there courses or workshops on R/qtl?</i></font>
+
+      <p><a href="http://www.jax.org">The Jackson Laboratory</a>, in
+      Bar Harbor, Maine, has held a short course
+      on complex trait analysis (generally in September or October) that has
+      included a tutorial on R/qtl.  See <a
+      href="http://www.jax.org/courses">http://www.jax.org/courses</a>.
+
+      <p>The Advanced QTL Mapping module in the <a
+      href="http://www.biostat.washington.edu/sisg">Summer Institute
+      in Statistical Genetics</a> (formerly held at <a
+      href="http://statgen.ncsu.edu">North Carolina State
+      University</a>; now at the <a
+      href="http://www.biostat.washington.edu">University of Washington,
+      Seattle</a>, in June) has included a tutorial on R/qtl.  See <a
+      href="http://www.biostat.washington.edu/sisg">http://www.biostat.washington.edu/sisg</a>.
+
+
+
+      
+<!--
+  <li><font color=#008><i></i></font>
+-->
+
+</ol>
+
+
+<p class=noindent><hr>
+
+<p align="center">[ <a href="http://www.rqtl.org">Home</a>
+| <a href="http://www.rqtl.org/download">Download</a> | <a 
+href="http://www.rqtl.org/STATUS.txt">Status</a> | <a
+href="http://www.rqtl.org/BUGS.txt">Bugs</a> | <a href="http://www.rqtl.org/graphs">Sample
+graphics</a> |
+<a href="http://www.rqtl.org/sampledata">Sample data</a> |
+<a href="http://www.rqtl.org/tutorials">Tutorials</a> | 
+<a href="http://www.rqtl.org/book">Book</a> |
+<a href="http://www.rqtl.org/manual/qtl-manual.pdf">Manual</a> | <a
+href="http://www.rqtl.org/citation.html">Citation</a> ] 
+
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-609649-1";
+urchinTracker();
+</script> 
+</body></html>

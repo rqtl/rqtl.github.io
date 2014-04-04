@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<meta charset="utf-8">
+<title>CTC2013 Abstracts</title>
+<script charset="utf-8" type="text/javascript" src="../d3.js"></script>
+<script charset="utf-8" type="text/javascript" src="../d3.tip.js"></script>
+<link rel="stylesheet" href="../ctc2013.css" type="text/css" />
+<link rel="stylesheet" href="d3-tip.css" type="text/css" />
+</head>
+
+<body>
+
+<h2>Gratuitous network visualization</h2>
+
+<h3>Abstracts</h3>
+
+<p id="title" style="height:20px;margin-left:20px;"></p>
+
+<div id="abstracts"></div>
+
+
+<p style="margin-left:65px;margin-top:-30px;">
+Nodes correspond to abstracts and are colored
+based on the number of authors.<br>
+Edges indicate that two abstracts have an author in common.<br>
+Hover over points to see the titles; click to jump to the abstract.
+</p>
+
+<p style="font-size:80%;">Written in <a href="http://coffeescript.org">CoffeeScript</a> with
+<a href="http://d3js.org">D3.js</a></p>
+
+<script type="text/javascript" src="force_abstracts.js"></script>
+</body>
+</html>
