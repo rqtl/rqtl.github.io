@@ -1,4 +1,3 @@
-
 Revision history for the R/qtl package
 ----------------------------------------------------------------------
 copyright (c) 2001-2014, Karl W Broman
@@ -16,6 +15,54 @@ http://www.rqtl.org
     A copy of the GNU General Public License, version 3, is available
     at http://www.r-project.org/Licenses/GPL-3
 ----------------------------------------------------------------------
+
+Version 1.34, 2014-10-29:
+
+Major changes:
+
+  Added ability to do X-chr-specific permutations in scantwo (argument
+  perm.Xsp, as in scanone). Separate thresholds are obtained for the
+  regions A:A, A:X, and X:X regions, maintaining control of the
+  overall false positive rates.
+
+  Added a function scantwopermhk that just performs scantwo
+  permutations with Haley-Knott regression; faster and with lower
+  memory usage than scantwo.
+
+  With X-chr-specific scantwo permutations, calc.penalties will give
+  separate main effect for autosome and X chromosome, and separate
+  interaction penalties for A:A, A:X, X:X. For A:A interactions, we
+  still use "light" and "heavy" penalties; for A:X and X:X
+  interactions, only the "heavy" penalty is used. These penalties may
+  be used in stepwiseqtl for better treatment of the X chromosome in
+  automated inference of multi-QTL models.
+
+  Added scanonevar() function, for a single-QTL genome scan for QTL
+  affecting not just the mean phenotype but also the variance. (Code
+  from Lars Ronnegard; method in Ronnegard and Valdar Genetics
+  188:435-447, 2011.)
+
+  Added "tidy" format to read.cross and write.cross. This separates
+  the data into three comma-delimited files, for genotypes,
+  phenotypes, and the marker map. Separating the data in this way
+  allows each file to be in a simpler format.
+
+Minor changes:
+
+  Add another option to fill.geno: impute using maximum marginal
+  probability.
+
+  Add function map2table (output like pull.map with as.table=TRUE, but
+  starting with a map rather than with a cross).
+
+  Fixed a bug in est_map_ri8self.c (thanks to Rohan Shah)
+
+  Fixed a bug in scanone/scantwo stratified permutations in batch,
+  with multiple phenotypes, some with missing values (thanks to
+  John Lovell).
+
+  Fixed some bugs in read.cross with format="mapqtl".
+
 
 Version 1.33, 2014-08-12:
 
@@ -320,7 +367,7 @@ Major changes:
     plot.info ->     plotInfo
     plot.pheno ->    plotPheno
     plot.pxg ->      plotPXG
-    plot.rf -> 	     plotRF
+    plot.rf ->       plotRF
     summary.map ->   summaryMap
     summary.scantwo.old -> summaryScantwoOld
 

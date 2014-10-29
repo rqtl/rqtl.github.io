@@ -1,4 +1,3 @@
-
 "To do" list for R/qtl
 ----------------------------------------------------------------------
 This file is intended to contain a list of many of the additions and
