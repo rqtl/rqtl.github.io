@@ -1,0 +1,251 @@
+{
+"days" : [
+    "Tuesday, 28 May",
+    "Wednesday, 29 May",
+    "Thursday, 30 May",
+    "Friday, 31 May"
+  ],
+
+"sdays" : [
+    "tue",
+    "wed",
+    "thu",
+    "fri"
+  ],
+
+"activities" : [
+    {
+    "start" : "5:00",
+    "end" : "7:00",
+    "startnum" : 17,
+    "endnum" : 19,
+    "activity" : "Reception",
+    "day" : 0,
+    "type" : "party"
+    },
+    {
+    "start" : "7:30",
+    "end" : "8:30",
+    "startnum" : 7.5,
+    "endnum" : 8.5,
+    "activity" : "Continental Breakfast",
+    "day" : 1,
+    "type" : "break"
+    },
+    {
+    "start" : "8:30",
+    "end" : "8:45",
+    "startnum" : 8.5,
+    "endnum" : 8.75,
+    "activity" : "Welcome",
+    "day" : 1,
+    "type" : "science"
+    },
+    {
+    "start" : "8:45",
+    "end" : "9:45",
+    "startnum" : 8.75,
+    "endnum" : 9.75,
+    "activity" : "Keynote",
+    "day" : 1,
+    "type" : "keynote"
+    },
+    {
+    "start" : "9:45",
+    "end" : "10:25",
+    "startnum" : 9.75,
+    "endnum" : 10.4166666666667,
+    "activity" : "Session 1",
+    "day" : 1,
+    "type" : "science"
+    },
+    {
+    "start" : "10:25",
+    "end" : "11:00",
+    "startnum" : 10.4166666666667,
+    "endnum" : 11,
+    "activity" : "Break",
+    "day" : 1,
+    "type" : "break"
+    },
+    {
+    "start" : "11:00",
+    "end" : "12:00",
+    "startnum" : 11,
+    "endnum" : 12,
+    "activity" : "Session 1",
+    "day" : 1,
+    "type" : "science"
+    },
+    {
+    "start" : "12:00",
+    "end" : "1:00",
+    "startnum" : 12,
+    "endnum" : 13,
+    "activity" : "Box lunch",
+    "day" : 1,
+    "type" : "break"
+    },
+    {
+    "start" : "1:00",
+    "end" : "2:40",
+    "startnum" : 13,
+    "endnum" : 14.6666666666667,
+    "activity" : "Session 2",
+    "day" : 1,
+    "type" : "science"
+    },
+    {
+    "start" : "2:40",
+    "end" : "3:00",
+    "startnum" : 14.6666666666667,
+    "endnum" : 15,
+    "activity" : "Break",
+    "day" : 1,
+    "type" : "break"
+    },
+    {
+    "start" : "3:00",
+    "end" : "5:00",
+    "startnum" : 15,
+    "endnum" : 17,
+    "activity" : "Posters (odd #’s)",
+    "day" : 1,
+    "type" : "science"
+    },
+    {
+    "start" : "6:00",
+    "end" : "8:00",
+    "startnum" : 18,
+    "endnum" : 20,
+    "activity" : "Social night out",
+    "day" : 1,
+    "type" : "party"
+    },
+    {
+    "start" : "8:00",
+    "end" : "8:30",
+    "startnum" : 8,
+    "endnum" : 8.5,
+    "activity" : "Continental Breakfast",
+    "day" : 2,
+    "type" : "break"
+    },
+    {
+    "start" : "8:30",
+    "end" : "9:30",
+    "startnum" : 8.5,
+    "endnum" : 9.5,
+    "activity" : "Keynote",
+    "day" : 2,
+    "type" : "keynote"
+    },
+    {
+    "start" : "9:30",
+    "end" : "10:10",
+    "startnum" : 9.5,
+    "endnum" : 10.1666666666667,
+    "activity" : "Session 3",
+    "day" : 2,
+    "type" : "science"
+    },
+    {
+    "start" : "10:10",
+    "end" : "10:40",
+    "startnum" : 10.1666666666667,
+    "endnum" : 10.6666666666667,
+    "activity" : "Break",
+    "day" : 2,
+    "type" : "break"
+    },
+    {
+    "start" : "10:40",
+    "end" : "12:00",
+    "startnum" : 10.6666666666667,
+    "endnum" : 12,
+    "activity" : "Session 3",
+    "day" : 2,
+    "type" : "science"
+    },
+    {
+    "start" : "12:00",
+    "end" : "2:00",
+    "startnum" : 12,
+    "endnum" : 14,
+    "activity" : "Lunch",
+    "day" : 2,
+    "type" : "break"
+    },
+    {
+    "start" : "2:00",
+    "end" : "3:20",
+    "startnum" : 14,
+    "endnum" : 15.3333333333333,
+    "activity" : "Session 4",
+    "day" : 2,
+    "type" : "science"
+    },
+    {
+    "start" : "3:20",
+    "end" : "4:00",
+    "startnum" : 15.3333333333333,
+    "endnum" : 16,
+    "activity" : "Break",
+    "day" : 2,
+    "type" : "break"
+    },
+    {
+    "start" : "4:00",
+    "end" : "6:00",
+    "startnum" : 16,
+    "endnum" : 18,
+    "activity" : "Posters (even #’s)",
+    "day" : 2,
+    "type" : "science"
+    },
+    {
+    "start" : "6:00",
+    "end" : "7:00",
+    "startnum" : 18,
+    "endnum" : 19,
+    "activity" : "Reception",
+    "day" : 2,
+    "type" : "party"
+    },
+    {
+    "start" : "8:00",
+    "end" : "8:30",
+    "startnum" : 8,
+    "endnum" : 8.5,
+    "activity" : "Continental Breakfast",
+    "day" : 3,
+    "type" : "break"
+    },
+    {
+    "start" : "8:30",
+    "end" : "10:00",
+    "startnum" : 8.5,
+    "endnum" : 10,
+    "activity" : "Panel Discussion",
+    "day" : 3,
+    "type" : "science"
+    },
+    {
+    "start" : "10:00",
+    "end" : "10:20",
+    "startnum" : 10,
+    "endnum" : 10.3333333333333,
+    "activity" : "Break",
+    "day" : 3,
+    "type" : "break"
+    },
+    {
+    "start" : "10:20",
+    "end" : "12:00",
+    "startnum" : 10.3333333333333,
+    "endnum" : 12,
+    "activity" : "Session 5",
+    "day" : 3,
+    "type" : "science"
+    }]
+}
