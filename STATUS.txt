@@ -1,6 +1,6 @@
 Revision history for the R/qtl package
 ----------------------------------------------------------------------
-copyright (c) 2001-2014, Karl W Broman
+copyright (c) 2001-2015, Karl W Broman
 http://www.rqtl.org
 
     The R/qtl package is free software; you can redistribute it and/or
@@ -15,6 +15,39 @@ http://www.rqtl.org
     A copy of the GNU General Public License, version 3, is available
     at http://www.r-project.org/Licenses/GPL-3
 ----------------------------------------------------------------------
+
+Version 1.36, 2015-03-05
+
+Major changes:
+
+  None.
+
+Minor changes:
+
+  Added a function flip.order() for flipping the order of markers on
+  selected chromosomes.
+
+  Added scanonevar.meanperm and scanonevar.varperm (from Robert Corty)
+  for permutation tests with scanonevar().
+
+  Revised plotPheno (aka plot.pheno) so that one can control the
+  x-axis label and title (also, in a histogram, the breaks).
+
+  plotPXG: if infer=FALSE and there are no fully-informative genotypes
+  (e.g., in a 4-way cross), give a more informative error.
+
+  geno.image: allow control of x- and y-axis labels; allow suppression
+  of axes.
+
+  Removed some warnings about missing end-of-line characters, in
+  read.cross with MapQTL format.
+
+  Fixed a bug in scanonevar; was failing with an error about coercing
+  class "A" to a data.frame
+
+  Dropped the name summary.scantwo.old(); still available as
+  summaryScantwoOld().
+
 
 Version 1.35, 2014-12-15:
 
