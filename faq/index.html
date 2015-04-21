@@ -9,15 +9,15 @@
 <h2 align="center">R/qtl Frequently Asked Questions</h2>
 
 <p align="center">[ <a href="http://www.rqtl.org">Home</a>
-| <a href="http://www.rqtl.org/download">Download</a> | <a 
+| <a href="http://www.rqtl.org/download">Download</a> | <a
 href="http://www.rqtl.org/STATUS.txt">Status</a> | <a
 href="http://www.rqtl.org/BUGS.txt">Bugs</a> | <a href="http://www.rqtl.org/graphs">Sample
 graphics</a> |
 <a href="http://www.rqtl.org/sampledata">Sample data</a> |
-<a href="http://www.rqtl.org/tutorials">Tutorial</a> | 
+<a href="http://www.rqtl.org/tutorials">Tutorial</a> |
 <a href="http://www.rqtl.org/book">Book</a> |
 <a href="http://www.rqtl.org/manual/qtl-manual.pdf">Manual</a> | <a
-href="http://www.rqtl.org/citation.html">Citation</a> ] 
+href="http://www.rqtl.org/citation.html">Citation</a> ]
 <p class=noindent><hr>
 
 <p class=noindent>If you have questions, suggestions, corrections,
@@ -37,7 +37,7 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
       (kbroman at biostat.wisc.edu), attaching a
       copy of your data.  He's had little trouble, up to now,
       providing assistance with such problems, and will keep your data
-      confidential.  
+      confidential.
   </li>
 
 
@@ -84,12 +84,12 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
 
       <p><pcode>> </pcode><code>version</code><br>
       <pcode>> </pcode><code>qtlversion()</code>
-  
+
 
 
 
   <li><font color=#008><i>I'm running out of memory; what should I
-  do?</i></font> 
+  do?</i></font>
 
       <p>In Windows, by default you get 1 Gb memory (or the amount of
       RAM you have on your computer, if that is less that 1 Gb).  If
@@ -110,7 +110,7 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
       href="http://cran.r-project.org/bin/windows/rw-FAQ.html">R for Windows
       FAQ</a> and, within R, type <code>?Memory</code> and
       <code>?memory.size</code>.
-  
+
 
 
   <li><font color=#008><i>I'm still running out of memory; what should
@@ -121,7 +121,7 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
 
       <p>First, clean up your workspace, removing objects that aren't
       important to you.  You can save objects to disk with the
-      <code>save</code> command.  
+      <code>save</code> command.
 
       <p>The multiple imputation method, as implemented, uses a
       particularly large amount of memory.  Consider using a small number
@@ -141,7 +141,7 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
 
 
   <li><font color=#008><i>Does R/qtl support multiple computer
-      processors?</i></font> 
+      processors?</i></font>
 
       <p>R currently can deal with just one processor at a time.  However, if
       you have a computer with multiple processors, you can speed up
@@ -149,7 +149,7 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
       at once.  We routinely make use of the multiple processors on a linux
       cluster for more rapid permutation tests.
 
-      <p>If a permutation test is to be split across multiple processors, 
+      <p>If a permutation test is to be split across multiple processors,
       it is important to ensure that the random number seeds are set to be
       different for the different jobs, using the function
       <code>set.seed</code>.  Otherwise, the multiple jobs may give
@@ -173,12 +173,12 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
       shortcut to the R GUI (there may already be one on your
       desktop) and then do the following:
       <ol class=nogap><li>Right-click on the shortcut.
-	  <li>Select the tab "Shortcut".
-	  <li>Change "Start in" to the desired working directory.</ol>
+      <li>Select the tab "Shortcut".
+      <li>Change "Start in" to the desired working directory.</ol>
 
       <p>To change R's default working directory on a Mac, start R and
-	  then select (on the menu bar) R -> Preferences -> Startup,
-	  and then change the "Initial working directory".
+      then select (on the menu bar) R -> Preferences -> Startup,
+      and then change the "Initial working directory".
 
   <li><font color=#008><i>Can one analyze recombinant inbred line
       (RIL) data?</i></font>
@@ -197,8 +197,8 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
       <p>The data are treated essentially like a backcross, but the
       map is expanded before calculating QTL genotype probabilities
       and so forth.  Note that we currently can deal only with strain
-      averages as phenotypes.  
-  
+      averages as phenotypes.
+
 
   <li><font color=#008><i>Can one analyze outcross data?</i></font>
 
@@ -222,7 +222,7 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
       lines.  One might analyze such data as if they were from an intercross,
       though with an expanded genetic map, but it is important to take
       account of the relationships among individuals (for example, the
-      sibships in the final generation), and R/qtl is not 
+      sibships in the final generation), and R/qtl is not
       currently able to do that.
 
 
@@ -273,7 +273,7 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
       score greater or equal to that observed.  Then <i>x</i> follows a
       binomial(<i>n</i>, <i>p</i>) distribution.  Our estimate of the p-value is
       <i>x</i>/<i>n</i>, and this has standard error (SE) =
-      &radic;[<i>p</i>(1&#150;<i>p</i>)/<i>n</i>]. 
+      &radic;[<i>p</i>(1&#150;<i>p</i>)/<i>n</i>].
 
       <p>If one wishes the SE of the estimated p-value to be &sim;0.001 in
       the case that <i>p</i> &asymp; 0.05, one would need 0.05 &times; 0.95 /
@@ -289,7 +289,7 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
 
   <li><font color=#008><i>Can I analyze a monogenic (Mendelian) trait?</i></font>
 
-      <p>Yes.  Use <code>model="binary"</code> in <code>scanone</code> or 
+      <p>Yes.  Use <code>model="binary"</code> in <code>scanone</code> or
       <code>scantwo</code>.
       Alternatively, created a dummy marker with the genotypes encoding the
       phenotypes, and use <code>est.rf</code>
@@ -347,14 +347,14 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
       complete genotype data) near the position of interest, and perform a
       genome scan with that marker as first an additive and then an
       interactive covariate.  The difference between the two sets of LOD
-      scores concern evidence for interaction with the marker position.  
+      scores concern evidence for interaction with the marker position.
 
 
       <p>Alternatively, one can use <code>makeqtl</code> and then
       <code>addqtl</code>, using either Haley-Knott regression or
       multiple imputaton.  See the following code, for interactions
       with the locus at 18 cM on chromosome 15 in the
-      <code>hyper</code> data.  
+      <code>hyper</code> data.
 
 <p>
 <pcode>> </pcode><code>data(hyper)</code><br>
@@ -410,14 +410,14 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
 
 
 
-      
+
   <li><font color=#008><i>Can R/qtl be used to perform association mapping (aka
   </i>in silico<i> mapping)?</i></font>
 
       <p>No.
 
 
-      
+
   <li><font color=#008><i>Can one use physical locations of markers in place of a
       genetic map?</i></font>
 
@@ -431,7 +431,7 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
 
 
 
-      
+
   <li><font color=#008><i>What map function should I use?</i></font>
 
       <p>In general, one should use a map function that best reflects the level
@@ -450,7 +450,7 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
 
 
 
-      
+
   <li><font color=#008><i>Are QTL mapping results much affected by segregation
       distortion?</i></font>
 
@@ -469,18 +469,18 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
 
 
 
-      
+
   <li><font color=#008><i>The organism I'm studying doesn't have a linkage map.  Can
       I construct one from scratch with R/qtl?</i></font>
 
       <p>There are several facilities for constructing genetic maps
-      <i>de novo</i> in R/qtl.  
+      <i>de novo</i> in R/qtl.
 
       <p>First, import the data as if all markers are on one
       chromosome.
 
       <p>Use <code>est.rf</code>
-      to estimate the pairwise marker recombination fractions and then 
+      to estimate the pairwise marker recombination fractions and then
       <code>formLinkageGroups</code>
       to partition the markers into linkage groups.
 
@@ -491,10 +491,10 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
 
       <p>The other tools you'll be wanting are:
       <ul>
-	<li><code>est.map</code>
-	<li><code>replace.map</code>
-	<li><code>switch.order</code>
-	<li><code>movemarker</code>
+    <li><code>est.map</code>
+    <li><code>replace.map</code>
+    <li><code>switch.order</code>
+    <li><code>movemarker</code>
       </ul><p>
 
   <li><font color="#008"><i>When I run <code>scanone</code> (or <code>scantwo</code>),
@@ -507,7 +507,7 @@ Should I worry about this?</i></font>
 <p>That warning message is saying that one of the many linear
 regression fits was over-specified. That may happen if one of the
 possible genotypes is missing, particularly in the iterative methods
-(such as <code>method="em"</code> and <code>method="ehk"</code>). 
+(such as <code>method="em"</code> and <code>method="ehk"</code>).
 
 <p>You can generally ignore this. It usually happens in regions with
 little evidence for a QTL. Sometimes you'll get spuriously large LOD
@@ -534,7 +534,7 @@ to explain such artifacts.</li><p>
 
 
 
-      
+
 <!--
   <li><font color=#008><i></i></font>
 -->
@@ -545,15 +545,15 @@ to explain such artifacts.</li><p>
 <p class=noindent><hr>
 
 <p align="center">[ <a href="http://www.rqtl.org">Home</a>
-| <a href="http://www.rqtl.org/download">Download</a> | <a 
+| <a href="http://www.rqtl.org/download">Download</a> | <a
 href="http://www.rqtl.org/STATUS.txt">Status</a> | <a
 href="http://www.rqtl.org/BUGS.txt">Bugs</a> | <a href="http://www.rqtl.org/graphs">Sample
 graphics</a> |
 <a href="http://www.rqtl.org/sampledata">Sample data</a> |
-<a href="http://www.rqtl.org/tutorials">Tutorials</a> | 
+<a href="http://www.rqtl.org/tutorials">Tutorials</a> |
 <a href="http://www.rqtl.org/book">Book</a> |
 <a href="http://www.rqtl.org/manual/qtl-manual.pdf">Manual</a> | <a
-href="http://www.rqtl.org/citation.html">Citation</a> ] 
+href="http://www.rqtl.org/citation.html">Citation</a> ]
 
 
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
@@ -561,5 +561,5 @@ href="http://www.rqtl.org/citation.html">Citation</a> ]
 <script type="text/javascript">
 _uacct = "UA-609649-1";
 urchinTracker();
-</script> 
+</script>
 </body></html>
