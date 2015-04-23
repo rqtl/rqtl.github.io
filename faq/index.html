@@ -515,6 +515,16 @@ scores (> 100) in these situations, in which case the warning may help
 to explain such artifacts.</li><p>
 
 
+  <li><font color="#008"><i>Each time I run <code>cim()</code>, I get
+  slightly different results.</i></font></li>
+
+<p>Prior to running forward selection at markers to identify
+  a set of marker covariates, <code>cim()</code> will use a single
+  random imputation to fill in any missing genotype data at
+  markers. This can lead to some randomness in the selection of marker
+  covariates and to so in the <code>cim()</code> results.</p>
+
+
   <li><font color=#008><i>Are there courses or workshops on R/qtl?</i></font>
 
       <p><a href="http://www.jax.org">The Jackson Laboratory</a>, in
