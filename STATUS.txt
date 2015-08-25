@@ -16,6 +16,41 @@ http://www.rqtl.org
     at http://www.r-project.org/Licenses/GPL-3
 ----------------------------------------------------------------------
 
+Version 1.37, 2015-08-24
+
+Major changes:
+
+  None.
+
+Minor changes:
+
+  In read.cross with format="csv", "mm", or "tidy", don't let it
+  reorder the chromosomes (which it would do if there were chromosomes
+  named other than numbers < 1000, "X", or "x").
+
+  drop.markers now gives an error if you try to drop *all* of the
+  markers.
+
+  If cross object contains no genotype data, totmar() and nmar() now
+  give more meaningful errors.
+
+  Fixed a bug in scantwo and scantwopermhk in which an error would
+  occur if reduce2grid had been called and assumeCondIndep=FALSE. Now
+  forcing assumeCondIndep=TRUE in this case.
+
+  Fixed a bug in plot.pxg, in the case that not all possible genotypes
+  were observed at a marker.
+
+  Fixed a bug in stepwiseqtl, where if covar is not a data frame, they
+  don't get considered in the model.
+
+  Fixed a bug in fill.geno for method="maxmarginal" (wasn't putting NAs in
+  genotypes with probability < min.prob)
+
+  Fixed a bug in refineqtl that arises when multiple QTL are at exactly
+  the same position, which can arise in stepwiseqtl.
+
+
 Version 1.36, 2015-03-05
 
 Major changes:
