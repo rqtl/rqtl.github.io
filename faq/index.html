@@ -200,15 +200,21 @@ etc., please email Karl Broman (kbroman at biostat.wisc.edu).
       averages as phenotypes.
 
 
-  <li><font color=#008><i>Can one analyze outcross data?</i></font>
+  <li><font color=#008><i>Can one analyze outcross data (such as full-sib
+  and half-sib families from outbreds)?</i></font>
 
-      <p>Generally, no.  R/qtl does include facilities for analysis of a
-      phase-known four-way cross, generally derived from a cross between
-      four inbred strains, with all progeny from a cross of the form (A
-      &times; B) &times; (C &times; D), with females listed first.  See
-      the help
-      file for the <code>read.cross</code> function for details
-      about the coding of the genotype data.
+      <p>Generally, no.  R/qtl does include facilities for analysis of
+      a phase-known four-way cross, generally derived from a cross
+      between four inbred strains, with all progeny from a cross of
+      the form (A &times; B) &times; (C &times; D), with females
+      listed first.  But you must first infer phase, and R/qtl offers
+      no facilities for this. But see the help file for the
+      <code>read.cross</code> function for details about the coding of
+      the genotype data, if you wish to proceed.</p>
+
+      <p>Likely you're better off looking at <a
+      href="https://forge-dga.jouy.inra.fr/projects/qtlmap">QTLMap</a>
+      or <a href="https://cran.r-project.org/web/packages/onemap">onemap</a>.</p>
 
 
   <li><font color=#008><i>Can one analyze data on half-sib families?</i></font>
