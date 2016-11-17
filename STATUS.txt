@@ -16,6 +16,34 @@ http://www.rqtl.org
     at http://www.r-project.org/Licenses/GPL-3
 ----------------------------------------------------------------------
 
+Version 1.40, 2016-10-31
+
+Major changes:
+
+  cim() now halts with an error for cross type "4way". The method has
+  not been implemented for 4-way crosses, and the results are not
+  meaningful.
+
+Minor changes:
+
+  Small change to the way Bayesian credible intervals are calculated
+  by bayesint(), concerning the treatment of widths of intervals
+  between positions.
+
+  Fix bug in switchAlleles() so that it works with cross type "bcsft"
+  (and will give an appropriate error message for unsupported cross
+  types).
+
+  sim.cross gives a warning if model is specified but not used (this
+  is the case for RILs, where we've not implemented the simulation of
+  QTL effects)
+
+  plot.pxg (aka plotPXG) passes ... to plot(), so now you can control
+  the y-axis limits via ylim.
+
+  Fixed a problem with column names of output of scantwopermhk.
+
+
 Version 1.39, 2016-03-04
 
 Major changes:
