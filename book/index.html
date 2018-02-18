@@ -160,6 +160,37 @@ anyone who is interested."
 
 <h4>Major errata:</h4>
 <ol>
+<li>In R/qtl version 1.42-7 (2018-02-16), a number of function names were
+  changed:
+
+  <p><table cellpadding=1 border=1>
+    <tr><td><b>Old name</b></td>
+        <td><b>New name</b></td></tr>
+    <tr><td><code>plot.errorlod</code></td>
+        <td><code>plotErrorlod</code></td></tr>
+    <tr><td><code>plot.geno</code></td>
+        <td><code>plotGeno</code></td></tr>
+    <tr><td><code>plot.info</code></td>
+        <td><code>plotInfo</code></td></tr>
+    <tr><td><code>plot.missing</code></td>
+        <td><code>plotMissing</code></td></tr>
+    <tr><td><code>plot.pheno</code></td>
+        <td><code>plotPheno</code></td></tr>
+    <tr><td><code>plot.pxg</code></td>
+        <td><code>plotPXG</code></td></tr>
+    <tr><td><code>plot.rf</code></td>
+        <td><code>plotRF</code></td></tr>
+  </table>
+
+  <p>If you have old scripts that use these function names, add the
+  following code at the top:
+
+  <pre>
+  source("https://rqtl.org/dotfunc.R")
+  </pre>
+  </li><p>
+
+
 <li>Chapter 3, page 53, second paragraph: the sentence
 
   <blockquote>Individuals 5 and 138 have identical genotypes at all 86
@@ -173,6 +204,7 @@ anyone who is interested."
   the same genotype at 75/76 markers.</blockquote>
 
   <p>That is, we had the two pairs reversed.
+  </li><p>
 
 <li>Chapter 8, page 234, Table 8.2 has a couple of errors.
 
@@ -185,6 +217,7 @@ anyone who is interested."
   <p>The table should appear as follows.
 
     <p class=indent><a href="Figs/table_8.2_revised.png"><img src="Figs/table_8.2_revised_thumb.png"></a>
+  </li><p>
 
 <li>Chapter 11, page 349, Fig. 11.14 is seriously messed up.
 
@@ -192,6 +225,7 @@ anyone who is interested."
     larger version.)
 
     <p class=indent><a href="Figs/fig_11.14_revised.jpg"><img src="Figs/fig_11.14_revised_thumb.jpg"></a>
+   </li><p>
 
 <li>Appendix D, page 381, Table D.2 has a couple of errors.
 
@@ -201,12 +235,12 @@ anyone who is interested."
    <p>The table should appear as follows.
 
     <p class=indent><a href="Figs/table_D.2_revised.jpg"><img src="Figs/table_D.2_revised_thumb.jpg"></a>
-
+   </li><p>
 
 </ol>
 
 <h4>Minor errata:</h4>
-<ol start=5>
+<ol start=6>
 <li>Chapter 1, pages 4 and 5, legends to Fig. 1.1 and 1.2:
      Where we say "blue and pink", we should have said "blue and
       red".
