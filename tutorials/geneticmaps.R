@@ -10,7 +10,7 @@ set.seed(61777369)
 ###################################################
 ### code chunk number 2: myround
 ###################################################
-source("myround.R")
+library(broman) # includes myround() and holmans triangle stuff
 
 
 ###################################################
@@ -23,7 +23,7 @@ data(mapthis)
 ###################################################
 ### code chunk number 4: readdata (eval = FALSE)
 ###################################################
-## mapthis <- read.cross("csv", "http://www.rqtl.org/tutorials", "mapthis.csv", 
+## mapthis <- read.cross("csv", "http://www.rqtl.org/tutorials", "mapthis.csv",
 ##                       estimate.map=FALSE)
 
 
@@ -51,7 +51,7 @@ plotMissing(mapthis, main="")
 ###################################################
 ## par(mfrow=c(1,2), las=1)
 ## plot(ntyped(mapthis), ylab="No. typed markers", main="No. genotypes by individual")
-## plot(ntyped(mapthis, "mar"), ylab="No. typed individuals", 
+## plot(ntyped(mapthis, "mar"), ylab="No. typed individuals",
 ##      main="No. genotypes by marker")
 
 
@@ -60,7 +60,7 @@ plotMissing(mapthis, main="")
 ###################################################
 par(mfrow=c(1,2), las=1, cex=0.8)
 plot(ntyped(mapthis), ylab="No. typed markers", main="No. genotypes by individual")
-plot(ntyped(mapthis, "mar"), ylab="No. typed individuals", 
+plot(ntyped(mapthis, "mar"), ylab="No. typed individuals",
      main="No. genotypes by marker")
 
 
@@ -175,7 +175,6 @@ for(i in 1:3)
 ###################################################
 ### code chunk number 23: triangleplot
 ###################################################
-source("holmans_triangle.R")
 par(mar=rep(0.1,4), pty="s")
 triplot(labels=c("AA","AB","BB"))
 tripoints(gfreq, cex=0.8)
@@ -391,7 +390,7 @@ file <- "Rcache/rip5lik.RData"
 if(file.exists(file)) {
   load(file)
 } else {
-rip5lik <- ripple(mapthis, chr=5, window=4, method="likelihood", 
+rip5lik <- ripple(mapthis, chr=5, window=4, method="likelihood",
                   error.prob=0.005)
 save(rip5lik, file=file)
 }
@@ -400,7 +399,7 @@ save(rip5lik, file=file)
 ###################################################
 ### code chunk number 51: ripplechr5lik (eval = FALSE)
 ###################################################
-## rip5lik <- ripple(mapthis, chr=5, window=4, method="likelihood", 
+## rip5lik <- ripple(mapthis, chr=5, window=4, method="likelihood",
 ##                   error.prob=0.005)
 
 
@@ -477,7 +476,7 @@ file <- "Rcache/rip4lik.RData"
 if(file.exists(file)) {
   load(file)
 } else {
-rip4lik <- ripple(mapthis, chr=4, window=4, method="likelihood", 
+rip4lik <- ripple(mapthis, chr=4, window=4, method="likelihood",
                   error.prob=0.005)
 save(rip4lik, file=file)
 }
@@ -486,7 +485,7 @@ save(rip4lik, file=file)
 ###################################################
 ### code chunk number 61: ripplechr4lik (eval = FALSE)
 ###################################################
-## rip4lik <- ripple(mapthis, chr=4, window=4, method="likelihood", 
+## rip4lik <- ripple(mapthis, chr=4, window=4, method="likelihood",
 ##                   error.prob=0.005)
 
 
@@ -555,7 +554,7 @@ file <- "Rcache/rip3lik.RData"
 if(file.exists(file)) {
   load(file)
 } else {
-rip3lik <- ripple(mapthis, chr=3, window=4, method="likelihood", 
+rip3lik <- ripple(mapthis, chr=3, window=4, method="likelihood",
                   error.prob=0.005)
 save(rip3lik, file=file)
 }
@@ -564,7 +563,7 @@ save(rip3lik, file=file)
 ###################################################
 ### code chunk number 70: ripplechr3lik (eval = FALSE)
 ###################################################
-## rip3lik <- ripple(mapthis, chr=3, window=4, method="likelihood", 
+## rip3lik <- ripple(mapthis, chr=3, window=4, method="likelihood",
 ##                   error.prob=0.005)
 
 
@@ -626,7 +625,7 @@ file <- "Rcache/rip2lik.RData"
 if(file.exists(file)) {
   load(file)
 } else {
-rip2lik <- ripple(mapthis, chr=2, window=4, method="likelihood", 
+rip2lik <- ripple(mapthis, chr=2, window=4, method="likelihood",
                   error.prob=0.005)
 save(rip2lik, file=file)
 }
@@ -635,7 +634,7 @@ save(rip2lik, file=file)
 ###################################################
 ### code chunk number 78: ripplechr2lik (eval = FALSE)
 ###################################################
-## rip2lik <- ripple(mapthis, chr=2, window=4, method="likelihood", 
+## rip2lik <- ripple(mapthis, chr=2, window=4, method="likelihood",
 ##                   error.prob=0.005)
 
 
@@ -718,7 +717,7 @@ file <- "Rcache/rip1lik.RData"
 if(file.exists(file)) {
   load(file)
 } else {
-rip1lik <- ripple(mapthis, chr=1, window=4, method="likelihood", 
+rip1lik <- ripple(mapthis, chr=1, window=4, method="likelihood",
                   error.prob=0.005)
 save(rip1lik, file=file)
 }
@@ -727,7 +726,7 @@ save(rip1lik, file=file)
 ###################################################
 ### code chunk number 88: ripplechr1lik (eval = FALSE)
 ###################################################
-## rip1lik <- ripple(mapthis, chr=1, window=4, method="likelihood", 
+## rip1lik <- ripple(mapthis, chr=1, window=4, method="likelihood",
 ##                   error.prob=0.005)
 
 
@@ -778,7 +777,7 @@ plotRF(mapthis, main="")
 ###################################################
 ### code chunk number 96: plotrfafterreorder (eval = FALSE)
 ###################################################
-## messedup <- switch.order(mapthis, chr=1, c(1:11,23:33,12:22), 
+## messedup <- switch.order(mapthis, chr=1, c(1:11,23:33,12:22),
 ##                          error.prob=0.005)
 ## plotRF(messedup, chr=1)
 
@@ -787,7 +786,7 @@ plotRF(mapthis, main="")
 ### code chunk number 97: plotrfafterreorderplot
 ###################################################
 par(mar=c(4.1,4.1,1.6,1.6), las=1, pty="s", cex=0.8)
-messedup <- switch.order(mapthis, chr=1, c(1:11,23:33,12:22), 
+messedup <- switch.order(mapthis, chr=1, c(1:11,23:33,12:22),
                          error.prob=0.005)
 plotRF(messedup, chr=1, main="")
 
@@ -891,7 +890,7 @@ mapthis <- subset(mapthis, ind=(countXO(mapthis) < 50))
 ### code chunk number 111: rip5again
 ###################################################
 summary(rip <- ripple(mapthis, chr=5, window=7))
-summary(rip <- ripple(mapthis, chr=5, window=2, method="likelihood", 
+summary(rip <- ripple(mapthis, chr=5, window=2, method="likelihood",
                       error.prob=0.005))
 
 
