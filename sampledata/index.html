@@ -9,15 +9,15 @@
 <h2 align="center">R/qtl sample data files</h2>
 
 <p align="center">[ <a href="http://www.rqtl.org">Home</a>
-| <a href="http://www.rqtl.org/download">Download</a> | <a 
+| <a href="http://www.rqtl.org/download">Download</a> | <a
 href="http://www.rqtl.org/faq">FAQ</a> | <a
-href="http://www.rqtl.org/STATUS.txt">Status</a> | <a
+href="https://github.com/kbroman/qtl/blob/master/NEWS.md">News</a> | <a
 href="http://www.rqtl.org/BUGS.txt">Bugs</a> | <a href="http://www.rqtl.org/graphs">Sample
 graphics</a> |
-<a href="http://www.rqtl.org/tutorials">Tutorials</a> | 
+<a href="http://www.rqtl.org/tutorials">Tutorials</a> |
 <a href="http://www.rqtl.org/book">Book</a> |
 <a href="http://www.rqtl.org/manual/qtl-manual.pdf">Manual</a> | <a
-href="http://www.rqtl.org/citation.html">Citation</a> ] 
+href="http://www.rqtl.org/citation.html">Citation</a> ]
 <p class=noindent><hr>
 
 <p>These files contain sample QTL mapping data in several formats, so that the
@@ -41,7 +41,7 @@ by using <code>"http://www.rqtl.org/sampledata"</code> in place of <code>"."</co
 <p class=noindent><hr>
 <table cellpadding=2 cellspacing=2 noborder>
 
-<tr><td colspan=3><font size=4 color=#000066><pcode>"csv"</pcode> format</font> 
+<tr><td colspan=3><font size=4 color=#000066><pcode>"csv"</pcode> format</font>
 
 <tr><td valign="top">Data file:<td width=5>&nbsp;
     <td valign="top"><code><a href="listeria.csv">listeria.csv</a></code>
@@ -76,7 +76,7 @@ by using <code>"http://www.rqtl.org/sampledata"</code> in place of <code>"."</co
 <tr><td valign="top">R code:<td valign="top">
      <td valign="top"><code>listeria.a3 <- read.cross("csvs", ".",
                                   "listeria_gen.csv", "listeria_phe.csv")</code>
-	 
+
 <tr height=20><td valign="top">&nbsp;
 <tr><td colspan=3><font size=4 color=#000066><pcode>"csvsr"</pcode> format
   <font color=#777>(like <pcode>"csvs"</pcode>, but with both files rotated)</font></font>
@@ -89,9 +89,9 @@ by using <code>"http://www.rqtl.org/sampledata"</code> in place of <code>"."</co
 
 <tr><td valign="top">R code:<td valign="top">
      <td valign="top"><code>listeria.a4 <- read.cross("csvsr", ".",
-                                  "listeria_gen_rot.csv", 
+                                  "listeria_gen_rot.csv",
                                   "listeria_phe_rot.csv")</code>
-	 
+
 <tr height=20><td valign="top">&nbsp;
 <tr><td colspan=3><font size=4 color=#000066><pcode>"mm"</pcode>
   (MapMaker) format</font>
@@ -99,23 +99,23 @@ by using <code>"http://www.rqtl.org/sampledata"</code> in place of <code>"."</co
 <tr><td valign="top">Data file:<td width=15>
     <td valign="top"><code><a href="listeria_raw.txt">listeria_raw.txt</a></code>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
-	<font color=#777>(<pcode>"raw"</pcode> file containing both genotype and phenotype data)</font>
+    <font color=#777>(<pcode>"raw"</pcode> file containing both genotype and phenotype data)</font>
 
 <tr><td valign="top">Genetic map (ver 1):<td width=15>
-    <td valign="top"><code><a href="listeria_map.txt">listeria_map.txt</a></code> 
+    <td valign="top"><code><a href="listeria_map.txt">listeria_map.txt</a></code>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
-	<font color=#777>(markers must be in order; map positions are
-	not required)</font>
+    <font color=#777>(markers must be in order; map positions are
+    not required)</font>
 
 <tr><td valign="top">Genetic map (ver 2):<td width=15>
     <td valign="top"><code><a href="listeria_maps.txt">listeria_maps.txt</a></code>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
-	<font color=#777>(as produced by MapMaker/Exp)</font>
+    <font color=#777>(as produced by MapMaker/Exp)</font>
 
 <tr><td valign="top">R code:<td valign="top">
      <td valign="top"><code>listeria.b <- read.cross("mm", ".",
-	 "listeria_raw.txt", , "listeria_map.txt")</code><br>
-	 <code>listeria.bb <- read.cross("mm", ".",
+     "listeria_raw.txt", , "listeria_map.txt")</code><br>
+     <code>listeria.bb <- read.cross("mm", ".",
                                  "listeria_raw.txt", , "listeria_maps.txt")</code>
 
 
@@ -142,7 +142,7 @@ by using <code>"http://www.rqtl.org/sampledata"</code> in place of <code>"."</co
     <td valign="top"><code><a href="listeria_qc_map.txt">listeria_qc_map.txt</a></code>
 
 <tr><td valign="top">R code:<td valign="top">
-     <td valign="top"><code>listeria.d <- read.cross("qtlcart", ".", 
+     <td valign="top"><code>listeria.d <- read.cross("qtlcart", ".",
                                  "listeria_qc_cro.txt", "listeria_qc_map.txt")</code>
 
 </table>
@@ -151,15 +151,15 @@ by using <code>"http://www.rqtl.org/sampledata"</code> in place of <code>"."</co
 <p class=noindent><hr>
 
 <p align="center">[ <a href="http://www.rqtl.org">Home</a>
-| <a href="http://www.rqtl.org/download">Download</a> | <a 
+| <a href="http://www.rqtl.org/download">Download</a> | <a
 href="http://www.rqtl.org/faq">FAQ</a> | <a
-href="http://www.rqtl.org/STATUS.txt">Status</a> | <a
+href="https://github.com/kbroman/qtl/blob/master/NEWS.md">News</a> | <a
 href="http://www.rqtl.org/BUGS.txt">Bugs</a> | <a href="http://www.rqtl.org/graphs">Sample
 graphics</a> |
-<a href="http://www.rqtl.org/tutorials">Tutorials</a> | 
+<a href="http://www.rqtl.org/tutorials">Tutorials</a> |
 <a href="http://www.rqtl.org/book">Book</a> |
 <a href="http://www.rqtl.org/manual/qtl-manual.pdf">Manual</a> | <a
-href="http://www.rqtl.org/citation.html">Citation</a> ] 
+href="http://www.rqtl.org/citation.html">Citation</a> ]
 
 
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
@@ -167,5 +167,5 @@ href="http://www.rqtl.org/citation.html">Citation</a> ]
 <script type="text/javascript">
 _uacct = "UA-609649-1";
 urchinTracker();
-</script> 
+</script>
 </body></html>
