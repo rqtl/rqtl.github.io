@@ -19,12 +19,12 @@ ls()
 help(read.cross)
 ?read.cross
 
-# url.show("http://www.rqtl.org/rqtltour3.R")
+# url.show("https://rqtl.org/rqtltour3.R")
 
 ############################################################
 # Data import
 ############################################################
-sug <- read.cross("csv", "http://www.rqtl.org", "sug.csv",
+sug <- read.cross("csv", "https://rqtl.org", "sug.csv",
                   genotypes=c("CC", "CB", "BB"), alleles=c("C", "B"))
 
 ############################################################
@@ -82,7 +82,7 @@ plot(out.hk - out.em, ylim=c(-0.3, 0.3), ylab="LOD(HK)-LOD(EM)")
 ############################################################
 # Permutation tests
 ############################################################
-load(url("http://www.rqtl.org/various.RData"))
+load(url("https://rqtl.org/various.RData"))
 
 operm <- scanone(sug, method="hk", n.perm=1000)
 
@@ -156,7 +156,7 @@ summary(out.all, threshold=3, format="tabByChr")
 ############################################################
 # Data diagnostics
 ############################################################
-bad <- read.cross("csv", "http://www.rqtl.org", "bad.csv")
+bad <- read.cross("csv", "https://rqtl.org", "bad.csv")
 
 summary(bad)
 
@@ -261,10 +261,10 @@ top.errorlod(bad)
 ############################################################
 # Two-dimensional, two-QTL scans
 ############################################################
-sug <- read.cross("csv", "http://www.rqtl.org", "sug.csv",
+sug <- read.cross("csv", "https://rqtl.org", "sug.csv",
                   genotypes=c("CC", "CB", "BB"), alleles=c("C", "B"))
 
-load(url("http://www.rqtl.org/various.RData"))
+load(url("https://rqtl.org/various.RData"))
 
 sug <- calc.genoprob(sug, step=2)
 

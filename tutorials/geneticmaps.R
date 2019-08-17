@@ -23,7 +23,7 @@ data(mapthis)
 ###################################################
 ### code chunk number 4: readdata (eval = FALSE)
 ###################################################
-## mapthis <- read.cross("csv", "http://www.rqtl.org/tutorials", "mapthis.csv",
+## mapthis <- read.cross("csv", "https://rqtl.org/tutorials", "mapthis.csv",
 ##                       estimate.map=FALSE)
 
 
