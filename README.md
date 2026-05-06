@@ -5,6 +5,4 @@
 [![zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3688461.svg)](https://doi.org/10.5281/zenodo.3688461)
 [![r-universe badge](https://kbroman.r-universe.dev/qtl/badges/version)](https://kbroman.r-universe.dev/qtl)
 
-Website for the R/qtl software, <https://rqtl.github.io>.
-(I'm in the process of moving this from a different provider to
-github. Ultimately it will be at <https://rqtl.org>.)
+Website for the R/qtl software, <https://rqtl.org>.
